@@ -9,6 +9,13 @@ div {
     text-align: center;
     
   }
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0; /* Set the background color here */
+}
   
   /* Header styling */
   h1 {
