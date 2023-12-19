@@ -17,7 +17,7 @@ function Home() {
         formData.append("image", imgFile);
 
         try {
-            const response = await fetch("https://b4c8-183-82-111-80.ngrok-free.app/upload", {
+            const response = await fetch("https://barely-ruling-whale.ngrok-free.app", {
             method: "POST",
             body: formData,
             });
