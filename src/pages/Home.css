@@ -1,0 +1,37 @@
+/* home.css */
+
+/* Container styling */
+div {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Header styling */
+  h1 {
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  /* File input styling */
+  input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #28a745; /* Bootstrap success color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Response message styling */
+  h2 {
+    margin-top: 20px;
+    color: #333;
+  }
+  
