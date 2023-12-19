@@ -39,7 +39,7 @@ function Home() {
     };
 
     return (
-        <div>
+        <div class="container">
         <h1>Upload Image</h1>
         <input type="file" onChange={fileSelectHandler}></input>
         <button onClick={fileUploadHandler}>Generate</button>
