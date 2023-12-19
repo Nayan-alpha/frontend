@@ -1,6 +1,9 @@
 /* home.css */
 
 /* Container styling */
+form{
+    background-color:white;
+}
 div {
     max-width: 600px;
     margin: 0 auto;
