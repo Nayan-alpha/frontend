@@ -61,7 +61,7 @@ function Home() {
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
-
+        setImageURL(URL.createObjectURL(e.target.files[0]));
         setImage(file);
     };
 
