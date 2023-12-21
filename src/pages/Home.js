@@ -78,7 +78,7 @@ function Home() {
                 };
 
 
-                axios.post("https://test-report-3qti.onrender.com/predict",requestData, {
+                axios.post("https://barely-ruling-whale.ngrok-free.app/upload",requestData, {
                     withCredentials: true,
                 })
                     .then((response) => {
