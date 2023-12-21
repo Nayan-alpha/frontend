@@ -108,14 +108,14 @@ function Home() {
                 <button type="submit">Submit</button>
             </form>
 
+            {imageURL && (
+                <div>
+                    <h2>Selected Image Preview</h2>
+                    <img src={imageURL} alt="Selected" style={{ maxWidth: '100%', maxHeight: '300px' }} />
+                </div>
+             )}
             {prediction ? (
                 <div className='output'>
-                    {imageURL && (
-                        <div>
-                              <h2>Selected Image Preview</h2>
-                              <img src={imageURL} alt="Selected" style={{ maxWidth: '100%', maxHeight: '300px' }} />
-                        </div>
-                    )}
                     
                     <h2>prediction</h2>
                     {prediction}
