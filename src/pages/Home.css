@@ -29,7 +29,7 @@ div {
   
   /* Button styling */
   button {
-    background-color: #28a745; /* Bootstrap success color */
+    background-color: black; /* Bootstrap success color */
     color: #fff;
     border: none;
     padding: 10px 15px;
