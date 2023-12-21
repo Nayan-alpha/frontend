@@ -45,7 +45,7 @@ function Home() {
         <h1>Upload Image</h1>
         <input type="file" onChange={fileSelectHandler}></input>
         <button onClick={fileUploadHandler}>Generate</button>
-        <div> <img> src={imageUrl} alt="" style={{display:flex; maxwidth:250px; justify-content:centre;}} </div> 
+        <div> <img> src={imageUrl} alt="" style={{display:flex; maxwidth:250px; justify-content:centre;}} </img> </div> 
         <h2>Output: {responseMessage}</h2>
         </div>
     );
