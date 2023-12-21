@@ -7,11 +7,10 @@ import axios from 'axios'
 function Home() {
     const [imgFile, setImgFile] = useState(null);
     const [responseMessage,setResponseMessage] = useState("-----")
-    const [imageUrl,setImageUrl] =useState(null);
-
+    const[imageURL,setImageURL] = useState(null);
     const fileSelectHandler = (event) => {
         setImgFile(event.target.files[0]);
-        setImgURL(URL.createObjectURL(event.target.files[0]));
+        setImageURL(URL.createObjectURL(event.target.files[0]));
     };
     const fileUploadHandler = async () => {
         if (imgFile) {
@@ -41,7 +40,6 @@ function Home() {
     };
 
     return (
-        
         <div class="container">
         <h1>Upload Image</h1>
         <input type="file" onChange={fileSelectHandler}></input>
@@ -49,7 +47,7 @@ function Home() {
         {imageURL && (
         <div>
           <h2>Selected Image Preview</h2>
-          <img src={imageUrl} alt="Selected" style={{ maxWidth: '100%', maxHeight: '300px' }} />
+          <img src={imageURL} alt="Selected" style={{ maxWidth: '100%', maxHeight: '300px' }} />
         </div>
         )}
         <h2>Output: {responseMessage}</h2>
