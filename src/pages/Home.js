@@ -67,38 +67,59 @@ function Home() {
 
     const handlesubmit = async (e) => {
         e.preventDefault();
-        try {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                const base64data = reader.result.split(',')[1];
+         try {
+             const response = await fetch("https://barely-ruling-whale.ngrok-free.app/upload", {
+             method: "POST",
+             body: formData,
+            });
 
-                const requestData = {
-                    image: base64data,
-                    name: image.name || 'default_filename.jpg',
-                };
+            if (response.ok) {
+             console.log("Image uploaded successfully!");
+             const data = await response.text();
+             setResponseMessage(data)
+             } else {
+             console.error("Image upload failed.");
+             }
+         } catch (error) {
+             console.error("Error during image upload:", error);
+         }
+         }
+         else {
+         console.log('No file selected.');
+     }
+     };
+        // try {
+        //     const reader = new FileReader();
+        //     reader.onloadend = () => {
+        //         const base64data = reader.result.split(',')[1];
+
+        //         const requestData = {
+        //             image: base64data,
+        //             name: image.name || 'default_filename.jpg',
+        //         };
 
 
-                axios.post("https://barely-ruling-whale.ngrok-free.app/upload",requestData, {
-                    withCredentials: true,
-                })
-                    .then((response) => {
-                        const result = response;
+        //         axios.post("https://barely-ruling-whale.ngrok-free.app/upload",requestData, {
+        //             withCredentials: true,
+        //         })
+        //             .then((response) => {
+        //                 const result = response;
                         
-                        console.log(Object.keys(result))
+        //                 console.log(Object.keys(result))
                         
-                        setPrediction(result["data"]["prediction"])
-                        setTarget(result["data"]["target"])
-                        console.log('Response from server:', result);
-                    })
-                    .catch((error) => {
-                        console.error('Error:', error);
-                    });
-            };
+        //                 setPrediction(result["data"]["prediction"])
+        //                 setTarget(result["data"]["target"])
+        //                 console.log('Response from server:', result);
+        //             })
+        //             .catch((error) => {
+        //                 console.error('Error:', error);
+        //             });
+        //     };
 
-            reader.readAsDataURL(image);
-        } catch (error) {
-            console.log(error);
-        }
+        //     reader.readAsDataURL(image);
+        // } catch (error) {
+        //     console.log(error);
+        // }
     }
     return (
         <div>
