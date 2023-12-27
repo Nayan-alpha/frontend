@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Dashboard.css';
 
 function Home() {
     const [imgFile, setImgFile] = useState(null);
