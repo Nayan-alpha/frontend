@@ -77,7 +77,7 @@ function Home() {
 
   const clearHandler = () => {
     setImgFile(null);
-    setXrayImage(defaultImage);
+    // setXrayImage(defaultImage);
     setResponseMessage("Generated Text");
     setTarget("");
   };
