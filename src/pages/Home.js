@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Dashboard.css';
+import defaultImage from "../images/lung.jpg";
+import bg from "../images/dashboard.jpg";
+import loadingIcon from "../images/loading.gif";
 
 function Home() {
     const [imgFile, setImgFile] = useState(null);
