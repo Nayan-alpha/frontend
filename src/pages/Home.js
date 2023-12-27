@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import {./Home.css}
+import {./Home.css};
 
 function Home() {
   const [image, setImage] = useState(null);
