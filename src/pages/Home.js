@@ -96,11 +96,9 @@ function Home() {
             />
           </div>
           <div id="output">
-            // {loading ? (
-            //   // <img src={loadingIcon} alt="Loading" id="loader" />
-            // ) : (
+            
               <div className="output-text">{responseMessage}</div>
-            }
+            
           </div>
         </div>
 
